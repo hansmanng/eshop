@@ -1,5 +1,6 @@
 <?php
-
+// var_dump($_POST);
+// die();
 if(isset($_POST["id_product"], $_POST["content"], $_POST["rate"], $_SESSION['id']))
 {
 	// Etape 2

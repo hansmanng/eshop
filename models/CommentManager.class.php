@@ -72,14 +72,17 @@ class CommentManager
 		$error = $comment->setProduct($product); //return
 		if($error)
 			$errors[] = $error;
+		$error = $comment->setRate($rate);
+		if($error)
+			$errors[] = $error;
 		if(count($errors) != 0)
 			throw new Exceptions($errors);
 		// $content = mysqli_real_escape_string($this->db, $content);
 		// $id_author = intval($comment->getAuthor()->getId());
 		// $id_product = intval($comment->getProduct()->getId());
 		// $res = mysqli_query($this->db, "INSERT INTO comments (content, id_author, id_product) VALUES('".$content."', '".$id_author."', '".$id_product."')");
-		$request = $this->db->prepare("INSERT INTO  comments (content, id_author, id_product) VALUES(?, ?, ?)");
-		$res = $request->execute([$comment->getContent(), $comment->getAuthor()->getId(), $comment->getProduct()->getId()]);
+		$request = $this->db->prepare("INSERT INTO  comments (content, id_author, id_product, rate) VALUES(?, ?, ?, ?)");
+		$res = $request->execute([$comment->getContent(), $comment->getAuthor()->getId(), $comment->getProduct()->getId(), $comment->getRate()]);
 		if (!$res)
 			throw new Exceptions(["Erreur interne"]);
 		// $id = mysqli_insert_id($this->db);
