@@ -59,7 +59,7 @@ class CommentManager
 		return $comment;
 	}
 	// INSERT INTO    dans le même ordre que dans traitementComments.php:$_POST['content'], $_POST['id_article'], $_SESSION['id']
-	public function create($content, User $author, Products $product)
+	public function create($content, User $author, Products $product, $rate)
 	{
 		$errors = [];
 		$comment = new Comment($this->db);
