@@ -11,7 +11,7 @@ if(isset($_POST["id_product"], $_POST["content"], $_POST["rate"], $_SESSION['id'
 	$manager = new CommentManager($db);
 	try
 	{	
-		$comment = $manager->create($product, $_POST['content'], $rate, $author);
+		$comment = $manager->create($_POST['content'], $author, $product, $rate);
 		if ($comment)
 		{
 			// Etape 4
