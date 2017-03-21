@@ -1,0 +1,17 @@
+<article class="bloc_profile clear_fix">
+	<div class="content_profile">
+		<h2>Modifier mon profil</h2>
+		<form method="POST">
+			<input type="hidden" name="action" value="update">
+			<p>Votre email : <input type="email" value="<?=htmlentities($user->getEmail())?>" name="email"></p>
+			<p>Votre date de naissance : <?=htmlentities($user->getBirthdate())?></p>
+			<p>Votre adresse  : <input type="text" value="<?=htmlentities($user->getAddress())?>" name="address"></p>
+			<p>Votre nom  : <input type="text" value="<?=htmlentities($user->getName())?>" name="name"></p>
+			<p>Votre ville : <input type="text" value="<?=htmlentities($user->getCity())?>" name="city"></p>
+			<p>Votre nouveau mot de passe : <input type="password" name="password"></p>
+			<p>Votre ancien mot de passe : <input type="password" name="old_password"></p>
+			<input type="submit" value="Modifier" class="button btn btn-danger">
+		</form>
+	</div>
+	<a class="button btn btn-info" href="index.php?page=orders">Mes commandes</a>
+</article>

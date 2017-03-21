@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+	
+	
+			
+
+		<div style="margin-top:10px;"class="">
+			<ul class="nav nav-pills ">
+					<li role="presentation"class=""><a class="navbar-brand active" href="index.php">Animaniax</a></li>
+				<li role="presentation" class="<?=$page_login?>">
+					<a href="index.php?page=login">Se connecter</a>
+				</li>
+				<li role="presentation" class="<?=$page_register?>">
+					<a href="index.php?page=register">S'enregistrer</a>
+				</li>
+					<li role="presentation" style="margin-top:5px;"class="presentation">
+						<form class="search" method="GET">
+								<input type="hidden" value="search" name="page">
+								<input type="text" id="search_input" name="search" placeholder="Que recherchez-vous ?" value="<?=htmlentities($recherche)?>"/>
+								<input type="submit" value="Rechercher">
+						</form>
+					</li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+					<li><form method="GET">
+			<a class="navbar-brand" href="index.php">Animaniax</a>
+						<input type="hidden" value="search" name="page">
+						<input type="text" name="search" id="search_input" placeholder="Que recherchez-vous ?" value="<?=htmlentities($recherche)?>"/>
+						<input type="submit" value="Rechercher">
+					</form></li>
+				<li class="<?=$page_profile?>">
+					<a href="index.php?page=user">Mon profil</a>
+				</li>
+				<li class="<?=$page_logout?>">
+						<a href="index.php?page=logout">Se déconnecter</a>
+				</li>
+				<li class="navbar-right">
+					<a href="index.php?page=cart"><img style="width:40%;" src="public/images/cart.png">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<p>Bonjour <strong><?=htmlentities($_SESSION['email'])?></strong>, vous êtes maintenant connecté(e)!</p>
+	</div>
+</nav>

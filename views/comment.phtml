@@ -1,0 +1,28 @@
+<div class="alert">
+<div class="row">
+	<div class="col-sm-10">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<strong>
+					<?=htmlentities($comment->getAuthor()->getEmail())?>
+				</strong> 
+				<?php
+					$i = 1;
+					while($i <= 5)
+					{
+						if($i <= intval($comment->getRate()))
+							echo '<span class="starOn">☆</span>';
+						else
+							echo '<span class="starOff">☆</span>';
+							$i++;
+					}
+				?>
+				<span class="text-muted"><?=htmlentities($comment->getDate())?></span>
+			</div>
+			<div class="panel-body">
+				<p><?=htmlentities($comment->getContent())?></p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

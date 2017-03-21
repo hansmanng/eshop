@@ -1,0 +1,8 @@
+<article  class="category_elem col-md-3 ">
+<div id="accordion">
+	<a href="index.php?page=products&id_category=<?=$category->getId()?>">
+			<h2><?=htmlentities($category->getName())?></h2>
+		</a>
+		<p style="font-size:1.2rem;"><?=nl2br(htmlentities($category->getDescription()))?></p>
+</div>
+</article>

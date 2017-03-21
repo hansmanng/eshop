@@ -1,0 +1,22 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#champ1").after('<output></output>');
+		$("#champ1").live('change', function(){
+			var valof = $(this).val();
+			$('output').text(valof);
+		});
+	});
+</script>
+
+<footer class="footer">
+	<div class="containerFooter">
+		<ul class="nav  text-center">
+			<li class="text-center"><a href="index.php?page=categories">Les catégories</a></li>
+			<li class="text-center"><a href="index.php?page=user">Mon profil</a></li>
+			<li class="text-center"><a href="index.php?page=contact">Nous contacter</a></li>
+		</ul>
+		<div class="logo text-center"><img src="http://www.3sfrance.com/public/img/big/LOGO-PAYPAL-MP-279x300.png" alt="logo Paypal"></div>
+		<strong><p class="text-center">2017 - A N I M A N I A X - All Right Reserved &copy</p></strong>
+	</div>
+</footer>

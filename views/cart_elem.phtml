@@ -1,0 +1,19 @@
+<div class="col-md-4">
+	<div class="product-item">
+		<form method="post">
+			<input type="hidden" name="action" value="delete">
+			<input type="hidden" name="id_product" value="<?=$product->getId()?>">
+			<div class="pi-img-wrapper">
+				<a href="index.php?page=product&id=<?=$product->getId()?>">
+					<img style="width:200px; height:200px;"src="<?=htmlentities($product->getPicture())?>" alt="picture animals" class="picture_animals">
+					<p class= "products_name"><?=htmlentities($product->getName())?></p>
+				</a>
+				<p class ="products_price"><?=htmlentities($product->getPrice())?>€</p>
+				<br>
+				<p class ="products_quantity">Quantité: <input type="number" min="0" max="<?=$product->getQuantity()?>" value="<?=htmlentities($product->nbr)?>" name="quantity"><button type="submit" name="action" value="edit">Modifier</button></p>
+				<button type="submit" name="action" value="delete">X</button>
+			</div>
+			<div class="sticker sticker-new"></div>
+		</form>
+	</div>
+</div>

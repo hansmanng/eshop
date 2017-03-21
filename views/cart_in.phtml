@@ -1,0 +1,12 @@
+<form class="form" method="POST">
+	<input type="hidden" name="action" value="add">
+	<input type="hidden" name="id_product" value="<?=htmlentities($product->getId())?>">
+	<div class="content">
+		<form class="form" method="POST">
+			<label for="quantity">Quantité</label>
+			<input type="number" name="quantity" id="quantity" min="0" max="<?=htmlentities($product->getQuantity())?>"  class="quantity" name="quantity">
+			<br>
+			<button type="submit" class="button btn btn-info">Ajouter au panier</button>
+		</form>
+	</div>
+</form>

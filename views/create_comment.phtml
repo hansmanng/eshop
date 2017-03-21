@@ -1,0 +1,27 @@
+<div class="alert">
+<form method="POST" action="index.php?page=comments">
+	<input type="hidden" name="id_product" value="<?=$product->getId()?>">
+	<div class="form-group">
+		<label for="content">Commentaire:</label>
+		<input type="hidden" name="rate" id="rate">
+		<div class="rating">
+			<a href="#5" title="Donner 5 étoiles" data-rate="5">☆</a>
+			<a href="#4" title="Donner 4 étoiles" data-rate="4">☆</a>
+			<a href="#3" title="Donner 3 étoiles" data-rate="3">☆</a>
+			<a href="#2" title="Donner 2 étoiles" data-rate="2">☆</a>
+			<a href="#1" title="Donner 1 étoile" data-rate="1">☆</a>
+		</div>
+		<textarea class="form-control" id="content" name="content" placeholder="Contenu"></textarea>
+	</div>
+	<button type="submit" class="btn btn-default">Envoyer</button>
+</form>
+</div>
+<br>
+<h3>L'avis des internautes:</h3>
+<script>
+$('.rating>a').click(function()
+{
+	var rate = $(this).data('rate');
+	$('#rate').val(rate);
+});
+</script>

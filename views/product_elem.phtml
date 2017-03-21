@@ -1,0 +1,13 @@
+<div class="col-md-4">
+	<div class="product-item">
+		<div class="pi-img-wrapper">
+			<a href="index.php?page=product&id=<?=$product->getId()?>">
+				<img style="width:200px; height:200px;"src="<?=htmlentities($product->getPicture())?>" alt="picture animals" class="picture_animals thumbnail">
+				<p class= "products_name"><?=htmlentities($product->getName())?></p>
+				<p class ="products_price"><?=htmlentities($product->getPrice())?>€</p>
+
+			</a>
+		</div>
+		<div class="sticker sticker-new"></div>
+	</div>
+</div>

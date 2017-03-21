@@ -1,0 +1,20 @@
+
+<div class="content">
+	
+		<h1><?=htmlentities($product->getName())?></h1>
+		<img class=" pull-left thumbnail" style="width:20%; margin-right:30px;" src="<?=htmlentities($product->getPicture())?>" alt="chat">
+	
+	<h2><?=htmlentities($product->getDescription())?></h2>
+	<?php require('apps/cart_in.php'); ?>
+	<strong><p><?=htmlentities($product->getPrice())?> euros</p></strong>
+	<strong><p>Il en reste: <?=htmlentities($product->getQuantity())?></p></strong>
+
+
+
+</div>
+<div class="clearfix"></div>
+
+<?php 
+	require('apps/create_comment.php');
+    require('apps/comments.php'); 
+?>
